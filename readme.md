@@ -27,3 +27,20 @@ docker exec rag-pg psql -U postgres -c \
 
  #查询
  uv run python query.py
+
+
+
+ BM25算法（Best Matching） 25是此算法是经过25次迭代后得到的
+ BM25算法是一种用于信息检索和文本挖掘的算法，用于评估查询和文档之间的相关性。
+BM25算法的主要思想是，对于每个查询词，计算它在每个文档中的权重（相关性贡献），然后将这些权重相加，得到文档与查询的相关性得分。权重计算考虑了以下因素：
+
+1. 词频（Term Frequency, TF）：一个词在文档中出现的次数。TF值越高，表示这个词在文档中越重要。
+2. 文档频率（Document Frequency, DF）：包含某个词的文档数量。DF值越高，表示这个词在文档集合中越常见。
+3. 平均文档长度（Average Document Length）：文档集合中所有文档的平均长度。
+4. 查询长度（Query Length）：查询语句的长度。
+
+BM25算法通过以下公式计算每个词的权重：
+
+$$
+w_{i,j} = \frac{idf_{i} * tf_{i,j}}{\sqrt{dl_{j}} * \sqrt{avdl}}
+$$

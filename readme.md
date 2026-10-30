@@ -39,8 +39,7 @@ BM25算法的主要思想是，对于每个查询词，计算它在每个文档�
 3. 平均文档长度（Average Document Length）：文档集合中所有文档的平均长度。
 4. 查询长度（Query Length）：查询语句的长度。
 
-BM25算法通过以下公式计算每个词的权重：
+BM25算法通过以下公式计算：
 
-$$
-w_{i,j} = \frac{idf_{i} * tf_{i,j}}{\sqrt{dl_{j}} * \sqrt{avdl}}
-$$
+<img width="1360" height="516" alt="image" src="https://github.com/user-attachments/assets/7f12cdc8-76fd-40b3-afb5-0ffbc03fc8ca" />
+

@@ -39,7 +39,26 @@ BM25算法的主要思想是，对于每个查询词，计算它在每个文档�
 3. 平均文档长度（Average Document Length）：文档集合中所有文档的平均长度。
 4. 查询长度（Query Length）：查询语句的长度。
 
+
+
 BM25算法通过以下公式计算：
 
 <img width="1360" height="516" alt="image" src="https://github.com/user-attachments/assets/7f12cdc8-76fd-40b3-afb5-0ffbc03fc8ca" />
+
+BM25是词语匹配，并不能理解语义
+
+
+倒排索引：
+倒排索引用于快速找到包含query的相关文档，使得不用将query与所有文档进行相关性计算
+
+<img width="1374" height="1798" alt="image" src="https://github.com/user-attachments/assets/89443cd4-3e63-44cd-b39d-2f393a0d2430" />
+
+
+
+
+
+
+
+
+
 
